@@ -7,35 +7,63 @@
     <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="grid">
-        <div class="container_left">
-            <form>
-                <h2>Ponto de Partida x Destino; Tempo de Viagem</h2>
-                <textarea>Rio de Janeiro x São Paulo;50
-São Paulo x Maringá;55
-Porto Alegre x Salvador;180
-Belo Horizonte x Rio de Janeiro;65
-Manaus x Cuiaba;70</textarea>
-            </form>
+    <div class="container">
+        <div class="left-content">
+            <div class="wrapper">
+                <div class="textarea-label">
+                    <h2><i class="fa-solid fa-location-dot"></i> Rotas de Viagem e Durações dos Voos</h2>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <textarea placeholder="Rio de Janeiro x São Paulo; 50"></textarea>
+                    </form>
+                </div>
+            </div>
 
-            <form>
-                <h2>Linha Áerea</h2>
-                <textarea>AER001-AIRBUS
-AER002-BOING
-AER1010-EMBRAER</textarea>
-            </form>
+            <div class="wrapper">
+                <div class="textarea-label">
+                    <h2><i class="fa-solid fa-plane"></i> Linha Aérea</h2>
+                </div>
+                <div class="form-container">
+                    <form>
+                        <textarea placeholder="AER001-AIRBUS"></textarea>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="container_right">
-            <div>Div 1</div>
-            <div>Div 2</div>
+
+        <div class="right-content">
+            <div class="itinerary-label">
+                <h1><i class="fa-solid fa-globe"></i> Itinerário</h1>
+            </div>
+
+            <div class="itinerary-group">
+                <div class="itinerary-item">
+                    <p>Rio de Janeiro x São Paulo – 50 minutos de duração - AER001-AIRBUS</p>
+                    <p>São Paulo x Maringá – 55 minutos de duração - AER002-BOING</p>
+                    <p>Porto Alegre x Salvador – 180 minutos de duração - AER1010-EMBRAER</p>
+                    <p>Belo Horizonte x Rio de Janeiro – 65 minutos de duração - AER002-BOING</p>
+                    <p>Manaus x Cuiaba – 70 minutos de duração - AER001-AIRBUS</p>
+                </div>
+
+                <div class="itinerary-item">
+                    <p>AER001-AIRBUS - 2 voos – tempo total: 120 minutos</p>
+                    <p>AER1010-EMBRAER – 1 voo - tempo total: 180 minutos</p>
+                    <p>AER002-BOING – 2 voos – tempo total: 120 minutos</p>
+                </div>
+            </div>
+
             <div class="footer">
+                <hr>
                 <p>Desafio Técnico - Companhia Áerea<p>
-                <p>Desenvolvido por Marcos Vinícios do Carmo Ramos</p>
+                <p>Desenvolvido por <strong>Marcos Vinícios do Carmo Ramos</strong></p>
                 <a href="https://linkedin.com/in/marcoswolf/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/marcoswolf/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:contato@marcoswolf.com.br"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </div>
     </div>
+
     <script src="https://kit.fontawesome.com/e93cc4eddb.js" crossorigin="anonymous"></script>
 </body>
 </html>
