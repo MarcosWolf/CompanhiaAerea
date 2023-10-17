@@ -77,7 +77,7 @@ textarea:focus {
     display: grid;
     justify-content: center;
     align-items: end;
-    grid-template-rows: 1fr 1fr 1.2fr
+    grid-template-rows: 2fr 1fr;
 }
 
 .right-content i {
@@ -95,16 +95,18 @@ textarea:focus {
     color: var(--text-color);
 }
 
-.itinerary-item {
+.itinerary-group {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 3rem;
 }
 
 .footer {
     text-align: center;
     color: var(--text-color);
     margin-bottom: 2rem;
+    text-decoration: none;
 }
 
 .footer p {
@@ -117,10 +119,12 @@ textarea:focus {
     font-size: 2rem;
     margin-top: .5rem;
     padding: .3rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
 }
 
 .footer i:hover {
-    color: var(--priamry-color);
+    color: var(--primary-color);
 }
 
 .footer hr {
