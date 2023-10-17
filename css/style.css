@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #ffae00;
+    --hover-color: #ff9100;
     --secondary-color: #e7e7e7;
     --text-color: #363636;
     --border-color: #afafaf;
@@ -73,6 +74,24 @@ textarea:focus {
     box-shadow: 0 0 5px var(--primary-color);
 }
 
+#btn_updateItinerary {
+    border: 0;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    outline: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#btn_updateItinerary:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
 .right-content {
     display: grid;
     justify-content: center;
@@ -100,6 +119,14 @@ textarea:focus {
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
+}
+
+.itinerary-item {
+    min-height: 10rem;
+}
+
+.itinerary-item {
+    transition: 0.3s ease;
 }
 
 .footer {
@@ -147,7 +174,7 @@ textarea:focus {
 {
     .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column;        
     }
 
     .left-content {
@@ -181,6 +208,10 @@ textarea:focus {
         height: 8rem;
         box-sizing: border-box;
         padding: 1rem;
+    }
+
+    .form-container {
+        text-align: center;
     }
 
     .right-content {
@@ -253,6 +284,10 @@ textarea:focus {
         padding: 1rem;
     }
 
+    .form-container {
+        text-align: center;
+    }
+
     .right-content {
         display: flex;
         flex-direction: column;
@@ -321,6 +356,10 @@ textarea:focus {
         height: 12rem;
         box-sizing: border-box;
         padding: 1rem;
+    }
+
+    .form-container {
+        text-align: center;
     }
 
     .right-content {
@@ -393,6 +432,10 @@ textarea:focus {
         padding: 1rem;
     }
 
+    .form-container {
+        text-align: center;
+    }
+
     .right-content {
         display: flex;
         flex-direction: column;
@@ -449,6 +492,10 @@ textarea:focus {
         padding: 1.5rem;
         box-sizing: border-box;
         width: 100%;
+    }
+
+    .form-container {
+        text-align: center;
     }
 
     .right-content h1 {
