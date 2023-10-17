@@ -212,6 +212,7 @@ textarea:focus {
     }
 }
 
+/* Small devices */
 @media (min-width: 481px) and (max-width: 767px)
 {
     .container {
@@ -281,6 +282,7 @@ textarea:focus {
     }
 }
 
+/* Small Tablets */
 @media (min-width: 768px) and (max-width: 991px)
 {
     .container {
@@ -350,6 +352,7 @@ textarea:focus {
     }
 }
 
+/* Large Tablets/Laptops */
 @media (min-width: 992px) and (max-width: 1199px)
 {
     .container {
@@ -419,6 +422,7 @@ textarea:focus {
     }
 }
 
+/* Desktop */
 @media (min-width: 1200px) and (max-width: 1919px)
 {
     .container {
@@ -464,11 +468,4 @@ textarea:focus {
     }
     
 
-}
-
-@media (min-width: 1920px)
-{
-    .container {
-        grid-template-columns: 0.7fr 1fr;
-    }
 }
