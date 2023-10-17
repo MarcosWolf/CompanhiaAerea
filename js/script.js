@@ -1,5 +1,6 @@
 function getFlights() {
     const flightsItinerary = document.getElementById("itinerary-flights");
+    const reportsItinerary = document.getElementById("itinerary-reports");
     const updateButton = document.getElementById("btn_updateItinerary");
 
     let flightsIndex = 0;
@@ -8,8 +9,10 @@ function getFlights() {
     let airlinesData = null;
     let flightAirlinesMap = {};
     let displayedFlights = new Set();
+    let displayedReports = [];
 
     const flightsLimit = 5;
+    const reportsLimit = 3;
     let cycleCount = 0;
     const maxCycles = 10;
 
@@ -73,6 +76,48 @@ function getFlights() {
         }
     }
 
+    function updateReports() {
+        reportsItinerary.innerHTML = "";
+        for (let i = 0; i < reportsLimit && displayedReports.length > 0; i++) {
+            const reportsParagraph = document.createElement("p");
+            reportsParagraph.textContent = displayedReports.shift();
+            reportsItinerary.appendChild(reportsParagraph);
+        }
+
+        if (displayedReports.length === 0) {
+            displayedReports = generateReportData();
+        }
+    }
+
+    function generateReportData() {
+        const airlinesFlightsMap = {};
+        const airlinesDurationMap = {};
+    
+        for (const flight of flightsData) {
+            const [routes, duration] = flight.split(";");
+            const [pointA, pointB] = routes.split(" x ");
+            const route = `${pointA.trim()} x ${pointB.trim()}`;
+    
+            if (!flightAirlinesMap[route]) {
+                continue;
+            }
+    
+            const airlines = flightAirlinesMap[route];
+    
+            if (!airlinesFlightsMap[airlines]) {
+                airlinesFlightsMap[airlines] = 0;
+                airlinesDurationMap[airlines] = 0;
+            }
+    
+            airlinesFlightsMap[airlines] += 1;
+            airlinesDurationMap[airlines] += parseInt(duration);
+        }
+    
+        return Object.keys(airlinesFlightsMap).map(
+            airlines => `${airlines} - ${airlinesFlightsMap[airlines]} voos - tempo total: ${airlinesDurationMap[airlines]} minutos`
+        );
+    }
+
     updateButton.addEventListener("click", () => {
         updated = false;
         flightsIndex = 0;
@@ -82,13 +127,12 @@ function getFlights() {
     });
 
     updateFlights();
+    updateReports();
 
     setInterval(() => {
         updateFlights();
-    }, 2000);
+        updateReports();
+    }, 3000);
 }
 
 getFlights();
-
-const updateButton = document.getElementById("btn_updateItinerary");
-updateButton.dispatchEvent(new Event("click"));
