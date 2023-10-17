@@ -148,6 +148,7 @@ textarea:focus {
         align-items: center;
         height: auto;
         gap: 0;
+        box-sizing: border-box;
     }
 
     .left-content h2 {
@@ -155,10 +156,13 @@ textarea:focus {
     }
 
     .wrapper {
-        margin-top: 4rem;
         width: 100%;
         box-sizing: border-box;
         padding: 0rem 1rem 2rem 1rem;
+    }
+
+    .wrapper:first-child {
+        margin-top: 2rem;
     }
 
     .textarea-label {
@@ -182,7 +186,7 @@ textarea:focus {
     }
 
     .right-content h1 {
-        margin-top: 2rem;
+        margin-top: 4rem;
         text-align: center;
     }
 
@@ -192,6 +196,10 @@ textarea:focus {
         line-height: 2rem;
     }
 
+    .itinerary-group {
+        margin-bottom: 4rem;
+    }
+
     .footer hr {
         width: 100%;
     }
@@ -199,7 +207,71 @@ textarea:focus {
 
 @media (min-width: 481px) and (max-width: 767px)
 {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .left-content {
+        justify-content: start;
+        align-items: center;
+        height: auto;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .left-content h2 {
+        font-size: 1rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0rem 1rem 2rem 1rem;
+    }
+
+    .wrapper:first-child {
+        margin-top: 2rem;
+    }
+
+    .textarea-label {
+        padding: 1rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 8rem;
+        box-sizing: border-box;
+        padding: 1rem;
+    }
+
+    .right-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: auto;
+        gap: 0;
+    }
+
+    .right-content h1 {
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .right-content p {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+    .itinerary-group {
+        margin-bottom: 4rem;
+    }
+
+    .footer hr {
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px)
