@@ -132,7 +132,7 @@ function getFlights() {
     setInterval(() => {
         updateFlights();
         updateReports();
-    }, 3000);
+    }, 2000);
 }
 
 getFlights();
